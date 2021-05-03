@@ -786,6 +786,11 @@ const struct riscv_opcode riscv_opcodes[] =
 {"sfence.vma", 0, INSN_CLASS_I,   "s,t",  MATCH_SFENCE_VMA, MASK_SFENCE_VMA, match_opcode, 0 },
 {"wfi",        0, INSN_CLASS_I,   "",     MATCH_WFI, MASK_WFI, match_opcode, 0 },
 
+
+/* Shakti-Compartments instructions */
+{"checkcap",    0, INSN_CLASS_I,   "j", MATCH_CHECKCAP, MASK_CHECKCAP, match_opcode, 0 },
+
+
 /* Terminate the list.  */
 {0, 0, INSN_CLASS_NONE, 0, 0, 0, 0, 0}
 };
