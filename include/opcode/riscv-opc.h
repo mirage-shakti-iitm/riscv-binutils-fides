@@ -21,6 +21,12 @@
 #ifndef RISCV_ENCODING_H
 #define RISCV_ENCODING_H
 
+/* Shakti-MS Instructions */
+#define MATCH_HASH 0x200b
+#define MASK_HASH  0xfff0707f
+#define MATCH_VAL 0x202b
+#define MASK_VAL  0xfe00707f
+
 /* Shakti-Compartments */
 #define MATCH_CHECKCAP 0xb
 #define MASK_CHECKCAP  0xfffff
@@ -868,6 +874,10 @@
 
 #endif /* RISCV_ENCODING_H.  */
 #ifdef DECLARE_INSN
+
+/* Shakti-MS Instructions */
+DECLARE_INSN(val, MATCH_VAL, MASK_VAL)
+DECLARE_INSN(hash, MATCH_HASH, MASK_HASH)
 
 /* Shakti-Compartments */
 DECLARE_INSN(checkcap, MATCH_CHECKCAP, MASK_CHECKCAP)

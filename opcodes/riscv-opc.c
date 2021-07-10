@@ -790,6 +790,9 @@ const struct riscv_opcode riscv_opcodes[] =
 /* Shakti-Compartments instructions */
 {"checkcap",    0, INSN_CLASS_I,   "j", MATCH_CHECKCAP, MASK_CHECKCAP, match_opcode, 0 },
 
+/* Shakti-MS Instructions */
+{"hash",      0, INSN_CLASS_I,   "d,s",    MATCH_HASH, MASK_HASH, match_opcode, 0},
+{"val",      0, INSN_CLASS_I,   "d,s,t",    MATCH_VAL, MASK_VAL, match_opcode, 0},
 
 /* Terminate the list.  */
 {0, 0, INSN_CLASS_NONE, 0, 0, 0, 0, 0}
